@@ -7,37 +7,6 @@
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
-        <dependencies>
-<dependency>
-<groupId>org.sonarsource.scanner.maven</groupId>
-<artifactId>sonar-maven-plugin</artifactId>
-<version>3.2</version>
-</dependency>
-</dependencies>
-<distributionManagement>
-   <repository>
-      <id>nexus</id>
-      <url>http://100.25.133.213:8081/repository/maven-release/</url>
-   </repository>
-   <snapshotRepository>
-      <id>nexus</id>
-      <url>http://100.25.133.213:8081/repository/maven-snapshot/</url>
-   </snapshotRepository>
-</distributionManagement>
-<profiles>
-<profile>
-<id>sonar</id>
-<activation>
-<activeByDefault>true</activeByDefault>
-</activation>
-<properties>
-<!-- Optional URL to server. Default value is http://localhost:9000 -->
-<sonar.host.url>
-http://52.3.250.250:9090
-</sonar.host.url>
-</properties>
-</profile>
-</profiles>
 	<build>
 		<plugins>
 			<plugin>
